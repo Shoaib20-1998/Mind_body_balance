@@ -4,6 +4,7 @@ import Home from "../Pages/Home";
 import Login from "../Pages/login";
 import Signup from "../Pages/signup";
 import NotFound from "../Pages/NotFound";
+import Profile from "../Pages/Profile";
 
 const MainRoute = () => {
   return (
@@ -12,6 +13,7 @@ const MainRoute = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="*" element={<NotFound />} />
+      <Route path="/profile" element={<Profile />} />
     </Routes>
   );
 };
