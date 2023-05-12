@@ -1,15 +1,18 @@
-import "./App.css";
-import Navbar from "./Components/Navbar";
-import Login from "./Pages/login";
-import Signup from "./Pages/signup";
-import MainRoute from "./Routes/MainRoute";
 
+import React from 'react';
+import './App.css';
+
+import Navbar from "./Components/Navbar";
+import MainRoute from "./Routes/MainRoute";
+import Footer from './Components/Footer';
 function App() {
   return (
     <>
       <Navbar />
       <MainRoute />
+      <Footer />
     </>
+
   );
 }
 

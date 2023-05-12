@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 interface userDetailsProps {
   name: string;
   email: string;
@@ -138,3 +139,4 @@ export default function Signup() {
     </div>
   );
 }
+
