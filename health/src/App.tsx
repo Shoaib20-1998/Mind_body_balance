@@ -8,9 +8,11 @@ import Footer from './Components/Footer';
 function App() {
   return (
     <>
-      <Navbar />
-      <MainRoute />
-      <Footer />
+      <div className='App'>
+        <Navbar />
+        <MainRoute />
+        <Footer />
+      </div>
     </>
 
   );
