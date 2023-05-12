@@ -1,6 +1,7 @@
 import Mind from '../images/Mind_body-removebg-preview.png'
 
 const Navbar = () => {
+
     return <>
 
         <nav className=" bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
@@ -34,10 +35,7 @@ const Navbar = () => {
                 </div>
             </div>
         </nav>
-
-
-
     </>
-}
+};
 
 export default Navbar;

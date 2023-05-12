@@ -251,7 +251,7 @@ function Home() {
             </Box>
         </SimpleGrid>
 
-        <Box m={'auto'} mt={'50px'} bg={'#E2E8F0'} w={'90%'} p={6}>
+        <Box textAlign={'center'} m={'auto'} mt={'50px'} bg={'#E2E8F0'} w={'90%'} p={6}>
             <Heading as="h1" size="xl" mb={6}>
                 Get Fit and Healthy with Our Fitness Program
             </Heading>
@@ -365,7 +365,7 @@ function Home() {
 
                 <Box bg="white" rounded="md" shadow="md" p={6}>
                     <Heading as="h2" size="lg" mb={4}>
-                        Premium Plan
+                    Membership Plan
                     </Heading>
                     <Text fontSize="xl" mb={6}>
                         For fitness enthusiasts who want to take their training to the next
@@ -385,7 +385,7 @@ function Home() {
                         </Text>
                     </Box>
                     <Text fontSize="lg" fontWeight="semibold" mb={4}>
-                        $19.99/month
+                        $16.99/month
                     </Text>
                     <Button
                         as="a"
