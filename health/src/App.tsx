@@ -1,13 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Navbar from './Components/Navbar';
+import "./App.css";
+import Navbar from "./Components/Navbar";
+import Login from "./Pages/login";
+import Signup from "./Pages/signup";
+import MainRoute from "./Routes/MainRoute";
 
 function App() {
   return (
-    <div className="text-2xl font-bold underline">
-      <Navbar/>
-    </div>
+    <>
+      <Navbar />
+      <MainRoute />
+    </>
   );
 }
 
