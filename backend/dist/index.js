@@ -18,6 +18,7 @@ const Workout_route_1 = __importDefault(require("./routes/Workout.route"));
 const User_route_1 = __importDefault(require("./routes/User.route"));
 const auth_middleware_1 = __importDefault(require("./middleware/auth.middleware"));
 const db_1 = __importDefault(require("./config/db"));
+const Nutition_route_1 = __importDefault(require("./routes/Nutition.route"));
 const app = (0, express_1.default)();
 const port = 8080;
 // json
@@ -28,6 +29,10 @@ app.use((0, cors_1.default)());
 app.use('/workout', auth_middleware_1.default);
 // workout route
 app.use('/workout', Workout_route_1.default);
+// auth
+app.use('/nutrition', auth_middleware_1.default);
+// nutrition route
+app.use('/nutrition', Nutition_route_1.default);
 // user
 app.use('/user', User_route_1.default);
 app.listen(port, () => __awaiter(void 0, void 0, void 0, function* () {
