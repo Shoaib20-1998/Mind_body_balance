@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Box,
   IconButton,
@@ -7,11 +7,11 @@ import {
   Heading,
   Text,
   Container,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 // Here we have used react-icons package for the icons
-import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
+import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 // And react-slick as our Carousel Lib
-import Slider from 'react-slick';
+import Slider from "react-slick";
 
 // Settings for the slider
 const settings = {
@@ -33,37 +33,31 @@ export default function CaptionCarousel() {
 
   // These are the breakpoints which changes the position of the
   // buttons as the screen size changes
-  const top = useBreakpointValue({ base: '90%', md: '50%' });
-  const side = useBreakpointValue({ base: '30%', md: '40px' });
+  const top = useBreakpointValue({ base: "90%", md: "50%" });
+  const side = useBreakpointValue({ base: "30%", md: "40px" });
 
   // This list contains all the data for carousels
   // This can be static or loaded from a server
   const cards = [
     {
-        image:
-          'https://wallpapercave.com/wp/wp2904426.jpg',
+      image: "https://wallpapercave.com/wp/wp2904426.jpg",
     },
     {
-     
-      image:
-        'https://images4.alphacoders.com/112/1128335.jpg',
+      image: "https://images4.alphacoders.com/112/1128335.jpg",
     },
     {
-
-      image:
-        'https://wallpapercave.com/wp/wp3723991.jpg',
-    }
-   
+      image: "https://wallpapercave.com/wp/wp3723991.jpg",
+    },
   ];
 
   return (
     <Box
-      position={'relative'}
-      height={'700px'}
-      width={'90%'}
-      margin={'100px auto 20px'}
-      borderRadius={'30px'}
-      overflow={'hidden'}>
+      position={"relative"}
+      height={"700px"}
+      width={"90%"}
+      margin={"100px auto 20px"}
+      borderRadius={"30px"}
+      overflow={"hidden"}>
       {/* CSS files for react-slick */}
       <link
         rel="stylesheet"
@@ -83,7 +77,7 @@ export default function CaptionCarousel() {
         position="absolute"
         left={side}
         top={top}
-        transform={'translate(0%, -50%)'}
+        transform={"translate(0%, -50%)"}
         zIndex={2}
         onClick={() => slider?.slickPrev()}>
         <BiLeftArrowAlt size="40px" />
@@ -95,7 +89,7 @@ export default function CaptionCarousel() {
         position="absolute"
         right={side}
         top={top}
-        transform={'translate(0%, -50%)'}
+        transform={"translate(0%, -50%)"}
         zIndex={2}
         onClick={() => slider?.slickNext()}>
         <BiRightArrowAlt size="40px" />
@@ -105,7 +99,7 @@ export default function CaptionCarousel() {
         {cards.map((card, index) => (
           <Box
             key={index}
-            height={'6xl'}
+            height={"6xl"}
             position="relative"
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
@@ -115,14 +109,12 @@ export default function CaptionCarousel() {
             <Container size="container.lg" height="600px" position="relative">
               <Stack
                 spacing={6}
-                w={'full'}
-                maxW={'lg'}
+                w={"full"}
+                maxW={"lg"}
                 position="absolute"
                 top="50%"
                 color="white"
-                transform="translate(0, -50%)">
-                
-              </Stack>
+                transform="translate(0, -50%)"></Stack>
             </Container>
           </Box>
         ))}
