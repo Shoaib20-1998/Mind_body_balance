@@ -1,12 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './Components/Navbar';
+import Home from './Pages/Home';
+import Footer from './Components/Footer';
 
 function App() {
   return (
-    <div className="text-2xl font-bold underline">
+    <div className='App'>
       <Navbar/>
+      <Home />
+      <Footer />
     </div>
   );
 }

@@ -5,13 +5,16 @@ import App from './App';
 import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 // import { TailwindProvider } from 'tailwindcss'
+import { ChakraProvider } from '@chakra-ui/react';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
+  <ChakraProvider>
   <BrowserRouter>
     <App />
   </BrowserRouter>
+  </ChakraProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
