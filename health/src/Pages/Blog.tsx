@@ -1,9 +1,17 @@
 import React from 'react'
 
-function Community() {
+function Blog() {
   return (
-    <div>Community</div>
+    <>
+    <div>Blog</div>
+    <div>Blog</div>
+    <div>Blog</div>
+    <div>Blog</div>
+    <div>Blog</div>
+    <div>Blog</div>
+    <div>Blog</div>
+    </>
   )
 }
 
-export default Community
+export default Blog
