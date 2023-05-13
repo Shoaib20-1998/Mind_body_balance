@@ -18,7 +18,7 @@ const workout = express_1.default.Router();
 //get 
 workout.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const data = yield Workout_model_1.default.find({ userId: req.body.useId });
+        const data = yield Workout_model_1.default.find({ userId: req.body.userId });
         res.status(200).send(data);
     }
     catch (error) {
