@@ -1,6 +1,5 @@
 import React, { useReducer, useState } from "react";
 
-
 interface userDetailsprops {
   email: string;
   password: string;
@@ -18,7 +17,6 @@ export default function Login(): JSX.Element {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    console.log(form);
     setform(userDetails);
   };
   return (
@@ -110,4 +108,3 @@ export default function Login(): JSX.Element {
     </div>
   );
 }
-
