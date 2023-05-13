@@ -6,7 +6,6 @@ import Signup from "../Pages/signup";
 import NotFound from "../Pages/NotFound";
 import Profile from "../Pages/Profile";
 import Video from "../Pages/Video";
-
 const MainRoute = () => {
   return (
     <Routes>
@@ -15,6 +14,7 @@ const MainRoute = () => {
       <Route path="/signup" element={<Signup />} />
       <Route path="*" element={<NotFound />} />
       <Route path="/profile" element={<Profile />} />
+
       <Route path="/video" element={<Video/>}/>
     </Routes>
   );
