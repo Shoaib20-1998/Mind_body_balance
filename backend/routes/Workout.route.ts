@@ -6,7 +6,7 @@ const workout=express.Router();
 //get 
 workout.get('/',async(req,res)=>{
     try {
-        const data=await WorkoutModel.find({userId:req.body.useId});
+        const data=await WorkoutModel.find({userId:req.body.userId});
         res.status(200).send(data);
     } catch (error) {
         res.status(501).send({"error":"failed to fetch the data"});

@@ -13,33 +13,33 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const Workout_model_1 = __importDefault(require("../models/Workout.model"));
-const workout = express_1.default.Router();
-//get 
-workout.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+const Nutrition_model_1 = __importDefault(require("../models/Nutrition.model"));
+const nutrition = express_1.default.Router();
+// get plan
+nutrition.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const data = yield Workout_model_1.default.find({ userId: req.body.userId });
+        const data = yield Nutrition_model_1.default.find({ userId: req.body.userId });
         res.status(200).send(data);
     }
     catch (error) {
         res.status(501).send({ "error": "failed to fetch the data" });
     }
 }));
-// post 
-workout.post('/post', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+// post
+nutrition.post('/add', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const data = new Workout_model_1.default(req.body);
+        const data = new Nutrition_model_1.default(req.body);
         yield data.save();
-        res.status(201).send({ "success": "data is added" });
+        res.status(201).send({ "success": "data is added successfully" });
     }
     catch (error) {
         res.status(501).send({ "error": "failed to add the data" });
     }
 }));
-// edit
-workout.patch('/patch/:id', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+// patch
+nutrition.patch('/edit/:id', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        yield Workout_model_1.default.findByIdAndUpdate({ _id: req.params.id }, req.body);
+        yield Nutrition_model_1.default.findByIdAndUpdate({ _id: req.params.id }, req.body);
         res.status(200).send({ "success": "data is updated" });
     }
     catch (error) {
@@ -47,14 +47,14 @@ workout.patch('/patch/:id', (req, res) => __awaiter(void 0, void 0, void 0, func
     }
 }));
 // delete
-workout.delete('/delete/:id', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+nutrition.delete('/delete/:id', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        yield Workout_model_1.default.findByIdAndDelete({ _id: req.params.id });
+        yield Nutrition_model_1.default.findByIdAndDelete({ _id: req.params.id });
         res.status(200).send({ "success": "data is deleted successfully" });
     }
     catch (error) {
         res.status(501).send({ "error": "failed to delete the data" });
     }
 }));
-exports.default = workout;
-//# sourceMappingURL=Workout.route.js.map
+exports.default = nutrition;
+//# sourceMappingURL=Nutition.route.js.map

@@ -1,6 +1,7 @@
+import axios, { AxiosResponse, AxiosError } from "axios";
 import React, { useState } from "react";
-
-
+import { useNavigate } from "react-router";
+import { ToastContainer, toast } from "react-toastify";
 interface userDetailsProps {
   name: string;
   email: string;
@@ -13,13 +14,31 @@ const userDetails: userDetailsProps = {
   password: "",
 };
 export default function Signup() {
+  const navigate = useNavigate();
+  const notify = () => toast("Account Created");
   const [form, setform] = useState(userDetails);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setform({ ...form, [e.target.name]: e.target.value });
   };
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    console.log(form);
+    axios
+      .post<userDetailsProps>(
+        "https://mindbody.onrender.com/user/register",
+        form
+      )
+      .then((res: AxiosResponse) => {
+        console.log(res);
+        if (res.data.success === "account created successful") {
+          notify();
+          setTimeout(() => {
+            navigate("/login");
+          }, 2000);
+          console.log(res);
+          localStorage.setItem("auth", JSON.stringify(res.data));
+        }
+      })
+      .catch((err: AxiosError) => console.log(err));
     setform(userDetails);
   };
 
@@ -139,4 +158,3 @@ export default function Signup() {
     </div>
   );
 }
-
