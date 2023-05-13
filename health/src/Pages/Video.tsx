@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ReactPlayer from 'react-player';
 
-function Blog() {
+function Video() {
   interface verify{
     author:String,
     category:String,
@@ -54,4 +54,4 @@ function Blog() {
   )
 }
 
-export default Blog
+export default Video
