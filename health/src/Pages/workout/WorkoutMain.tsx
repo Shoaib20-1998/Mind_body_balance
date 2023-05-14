@@ -94,14 +94,6 @@
 
 // export default WorkoutMain;
 
-
-
-
-
-
-
-
-
 import { useState, useEffect } from "react";
 import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
 import axios from "axios";
@@ -110,12 +102,17 @@ import WorkoutForm from "./WorkoutForm";
 import { Workout as WorkoutType } from "./types";
 
 const API_URL = "https://mindbody.onrender.com";
-const API_TOKEN =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDVlOTVmMzVmZmZlYTA0M2FmMzNjMmYiLCJpYXQiOjE2ODM5OTEwODF9.1vDCf2_ZKMlO0BpCSfNeeJDfPE8-rfIHebl60LKfXuo";
+let obj = localStorage.getItem("token") || "";
+// console.log(obj);
+// let API_TOKEN = obj;
+// console.log(API_TOKEN);
+
+let API_TOKEN =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDVlN2NhYzNlYTVmMDhiNDAyMWZjYjAiLCJpYXQiOjE2ODQwNDE5Nzh9.v6oRacHJMwsQ96UfMdhuQ-y_iLoao_PHM8N4bpMS3ig";
 
 const WorkoutMain = () => {
   const [workouts, setWorkouts] = useState<WorkoutType[]>([]);
- 
+
   useEffect(() => {
     axios
       .get(`${API_URL}/workout`, {
@@ -127,16 +124,15 @@ const WorkoutMain = () => {
             return workout;
           } else {
             const { _id, ...rest } = workout;
-            console.log("132" ,workout._id)
+            console.log("132", workout._id);
             return rest;
           }
-         
         });
         setWorkouts(newWorkouts);
         console.log(newWorkouts);
       })
       .catch((err) => console.log(err));
-  }, [workouts]);
+  }, []);
   const handleCreateWorkout = (newWorkout: WorkoutType) => {
     const obj = {
       name: newWorkout.name,
@@ -189,28 +185,29 @@ const WorkoutMain = () => {
 
   return (
     <Box p="4">
-    <Heading as="h1" size="xl" mb="4">
-      Workout Routines
-    </Heading>
-    <WorkoutForm onSubmit={(newWorkout) => handleCreateWorkout({...newWorkout, _id: ''})} />
-    <SimpleGrid columns={[1, 2, 3]} spacing="10" color={"white"} pt={"20px"}>
-      {workouts.map((workout) => (
-        <Workout
-          key={workout._id}
-          workout={workout}
-          onDelete={handleDeleteWorkout}
-          onEdit={handleEditWorkout}
-        />
-      ))}
-    </SimpleGrid>
-  </Box>
+      <Heading as="h1" size="xl" mb="4">
+        Workout Routines
+      </Heading>
+      <WorkoutForm
+        onSubmit={(newWorkout) =>
+          handleCreateWorkout({ ...newWorkout, _id: "" })
+        }
+      />
+      <SimpleGrid columns={[1, 2, 3]} spacing="10" color={"white"} pt={"20px"}>
+        {workouts.map((workout) => (
+          <Workout
+            key={workout._id}
+            workout={workout}
+            onDelete={handleDeleteWorkout}
+            onEdit={handleEditWorkout}
+          />
+        ))}
+      </SimpleGrid>
+    </Box>
   );
 };
 
 export default WorkoutMain;
-
-
-
 
 // import { useState, useEffect } from 'react';
 // import { Box, Heading, SimpleGrid } from '@chakra-ui/react';
@@ -277,8 +274,6 @@ export default WorkoutMain;
 // };
 
 // export default WorkoutMain;
-
-
 
 //   { "name":"Back Workout",
 //   "exercises":
