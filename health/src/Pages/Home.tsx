@@ -198,6 +198,7 @@ function Home() {
             </Box>
             <Box
             
+            
                 bg="white"
                 rounded="md"
                 shadow="md"
