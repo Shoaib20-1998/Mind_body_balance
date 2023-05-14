@@ -197,8 +197,7 @@ function Home() {
                 </Link>
             </Box>
             <Box
-            
-            
+                    
                 bg="white"
                 rounded="md"
                 shadow="md"
