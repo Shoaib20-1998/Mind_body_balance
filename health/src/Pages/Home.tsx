@@ -2,6 +2,7 @@ import React from 'react'
 import { Box, Heading, Text, Button, Stack, SimpleGrid } from "@chakra-ui/react";
 import { FiChevronRight } from "react-icons/fi";
 import CaptionCarousel from '../Components/Crousel';
+import { Link } from 'react-router-dom';
 function Home() {
 
     return <>
@@ -33,7 +34,7 @@ function Home() {
                     transition="all 0.2s"
                     _hover={{ bg: "blue.600" }}
                 >
-                    <Text mr={2}>Get started</Text>
+                    <Link to="/login"><Text mr={2}>Get started</Text></Link>
                     <FiChevronRight />
                 </Box>
             </Box>
@@ -68,6 +69,7 @@ function Home() {
                     <Text fontSize="lg" fontWeight="semibold" mb={4}>
                         $9.99/month
                     </Text>
+                    <Link to="/login">
                     <Button
                         as="a"
                         href="#"
@@ -80,6 +82,7 @@ function Home() {
                     >
                         Choose Plan
                     </Button>
+                    </Link>
                 </Box>
                 <Box
                     bg="gray.200"
@@ -100,6 +103,7 @@ function Home() {
                     <Text fontSize="lg" fontWeight="semibold" mb={4}>
                         $19.99/month
                     </Text>
+                    <Link to="/login">
                     <Button
                         as="a"
                         href="#"
@@ -112,6 +116,7 @@ function Home() {
                     >
                         Choose Plan
                     </Button>
+                    </Link>
                 </Box>
 
                 <Box
@@ -133,18 +138,20 @@ function Home() {
                     <Text fontSize="lg" fontWeight="semibold" mb={4}>
                         $16.99/month
                     </Text>
-                    <Button
-                        as="a"
-                        href="#"
-                        colorScheme="blue"
-                        size="lg"
-                        fontWeight="semibold"
-                        rightIcon={<FiChevronRight />}
-                        _hover={{ bg: "blue.600" }}
-                        bg={'#2563EB'}
-                    >
-                        Choose Plan
-                    </Button>
+                    <Link to="/login">
+                        <Button
+                            as="a"
+                            href="#"
+                            colorScheme="blue"
+                            size="lg"
+                            fontWeight="semibold"
+                            rightIcon={<FiChevronRight />}
+                            _hover={{ bg: "blue.600" }}
+                            bg={'#2563EB'}
+                        >
+                            Choose Plan
+                        </Button>
+                    </Link>
                 </Box>
             </Stack>
         </Box>
@@ -174,18 +181,20 @@ function Home() {
                 <Text fontSize="lg" fontWeight="semibold" mb={4}>
                     350 calories
                 </Text>
-                <Button
-                    as="a"
-                    href="#"
-                    colorScheme="blue"
-                    size="lg"
-                    fontWeight="semibold"
-                    rightIcon={<FiChevronRight />}
-                    _hover={{ bg: "blue.600" }}
-                    bg={'#2563EB'}
-                >
-                    See Recipe
-                </Button>
+                <Link to="/login">
+                    <Button
+                        as="a"
+                        href="#"
+                        colorScheme="blue"
+                        size="lg"
+                        fontWeight="semibold"
+                        rightIcon={<FiChevronRight />}
+                        _hover={{ bg: "blue.600" }}
+                        bg={'#2563EB'}
+                    >
+                         See Recipe
+                    </Button>
+                </Link>
             </Box>
             <Box
                 bg="white"
@@ -205,18 +214,20 @@ function Home() {
                 <Text fontSize="lg" fontWeight="semibold" mb={4}>
                     400 calories
                 </Text>
-                <Button
-                    as="a"
-                    href="#"
-                    colorScheme="blue"
-                    size="lg"
-                    fontWeight="semibold"
-                    rightIcon={<FiChevronRight />}
-                    _hover={{ bg: "blue.600" }}
-                    bg={'#2563EB'}
-                >
-                    See Recipe
-                </Button>
+                <Link to="/login">
+                    <Button
+                        as="a"
+                        href="#"
+                        colorScheme="blue"
+                        size="lg"
+                        fontWeight="semibold"
+                        rightIcon={<FiChevronRight />}
+                        _hover={{ bg: "blue.600" }}
+                        bg={'#2563EB'}
+                    >
+                         See Recipe
+                    </Button>
+                </Link>
             </Box>
             <Box
                 bg="white"
@@ -236,18 +247,20 @@ function Home() {
                 <Text fontSize="lg" fontWeight="semibold" mb={4}>
                     450 calories
                 </Text>
-                <Button
-                    as="a"
-                    href="#"
-                    colorScheme="blue"
-                    size="lg"
-                    fontWeight="semibold"
-                    rightIcon={<FiChevronRight />}
-                    _hover={{ bg: "blue.600" }}
-                    bg={'#2563EB'}
-                >
-                    See Recipe
-                </Button>
+                <Link to="/login">
+                    <Button
+                        as="a"
+                        href="#"
+                        colorScheme="blue"
+                        size="lg"
+                        fontWeight="semibold"
+                        rightIcon={<FiChevronRight />}
+                        _hover={{ bg: "blue.600" }}
+                        bg={'#2563EB'}
+                    >
+                        See Recipe
+                    </Button>
+                    </Link>
             </Box>
         </SimpleGrid>
 
@@ -277,18 +290,20 @@ function Home() {
                     <Text fontSize="lg" fontWeight="semibold" mb={4}>
                         $0.00/month
                     </Text>
-                    <Button
-                        as="a"
-                        href="#"
-                        colorScheme="blue"
-                        size="lg"
-                        fontWeight="semibold"
-                        rightIcon={<FiChevronRight />}
-                        _hover={{ bg: "blue.600" }}
-                        bg={'#2563EB'}
-                    >
-                        Sign Up Now
-                    </Button>
+                    <Link to='/signup'>
+                        <Button
+                            as="a"
+                            href="#"
+                            colorScheme="blue"
+                            size="lg"
+                            fontWeight="semibold"
+                            rightIcon={<FiChevronRight />}
+                            _hover={{ bg: "blue.600" }}
+                            bg={'#2563EB'}
+                        >
+                            Sign Up Now
+                        </Button>
+                    </Link>
                 </Box>
 
 
@@ -313,18 +328,20 @@ function Home() {
                     <Text fontSize="lg" fontWeight="semibold" mb={4}>
                         $9.99/month
                     </Text>
-                    <Button
-                        as="a"
-                        href="#"
-                        colorScheme="blue"
-                        size="lg"
-                        fontWeight="semibold"
-                        rightIcon={<FiChevronRight />}
-                        _hover={{ bg: "blue.600" }}
-                        bg={'#2563EB'}
-                    >
-                        Sign Up Now
-                    </Button>
+                    <Link to='/signup'>
+                        <Button
+                            as="a"
+                            href="#"
+                            colorScheme="blue"
+                            size="lg"
+                            fontWeight="semibold"
+                            rightIcon={<FiChevronRight />}
+                            _hover={{ bg: "blue.600" }}
+                            bg={'#2563EB'}
+                        >
+                            Sign Up Now
+                        </Button>
+                    </Link>
                 </Box>
                 <Box bg="white" rounded="md" shadow="md" p={6}>
                     <Heading as="h2" size="lg" mb={4}>
@@ -349,23 +366,25 @@ function Home() {
                     <Text fontSize="lg" fontWeight="semibold" mb={4}>
                         $19.99/month
                     </Text>
-                    <Button
-                        as="a"
-                        href="#"
-                        colorScheme="blue"
-                        size="lg"
-                        fontWeight="semibold"
-                        rightIcon={<FiChevronRight />}
-                        _hover={{ bg: "blue.600" }}
-                        bg={'#2563EB'}
-                    >
-                        Sign Up Now
-                    </Button>
+                    <Link to='/signup'>
+                        <Button
+                            as="a"
+                            href="#"
+                            colorScheme="blue"
+                            size="lg"
+                            fontWeight="semibold"
+                            rightIcon={<FiChevronRight />}
+                            _hover={{ bg: "blue.600" }}
+                            bg={'#2563EB'}
+                        >
+                            Sign Up Now
+                        </Button>
+                    </Link>
                 </Box>
 
                 <Box bg="white" rounded="md" shadow="md" p={6}>
                     <Heading as="h2" size="lg" mb={4}>
-                    Membership Plan
+                        Membership Plan
                     </Heading>
                     <Text fontSize="xl" mb={6}>
                         For fitness enthusiasts who want to take their training to the next
@@ -387,118 +406,120 @@ function Home() {
                     <Text fontSize="lg" fontWeight="semibold" mb={4}>
                         $16.99/month
                     </Text>
-                    <Button
-                        as="a"
-                        href="#"
-                        colorScheme="blue"
-                        size="lg"
-                        fontWeight="semibold"
-                        rightIcon={<FiChevronRight />}
-                        _hover={{ bg: "blue.600" }}
-                        bg={'#2563EB'}
-                    >
-                        Sign Up Now
-                    </Button>
+                    <Link to='/signup'>
+                        <Button
+                            as="a"
+                            href="#"
+                            colorScheme="blue"
+                            size="lg"
+                            fontWeight="semibold"
+                            rightIcon={<FiChevronRight />}
+                            _hover={{ bg: "blue.600" }}
+                            bg={'#2563EB'}
+                        >
+                            Sign Up Now
+                        </Button>
+                    </Link>
                 </Box>
             </SimpleGrid>
         </Box>
         <Heading m={'10'} color={'white'} as="h2" size="lg">
-                Customer Victory Reviews
-            </Heading>
-            <SimpleGrid w={'90%'} m={'auto'} mb={'10'}columns={{ base: 1, md: 3 }} spacing={10}>
-                
-                <Box
-                    bg="white"
-                    rounded="md"
-                    shadow="md"
-                    p={6}
-                    maxW="sm"
-                    textAlign="center"
-                    m={'auto'}
-                >
-                    <Box mb={4}>
-                        <img
-                            src="https://static.toiimg.com/photo/msid-70347572/70347572.jpg"
-                            alt="Customer Victory Review"
-                            width="100%"
-                            height="150"
-                        //   borderRadius="full"
-                        //   objectFit="cover"
-                        />
-                    </Box>
-                    <Heading as="h3" size="md" mb={2}>
-                        Improved My Health and Confidence!
-                    </Heading>
-                    <Text fontSize="md" mb={4}>
-                        "Since starting this fitness program, I've noticed a huge
-                        improvement in my overall health and fitness. Not only have I lost
-                        weight and toned my body, but I also have more energy and feel more
-                        confident than ever before. I highly recommend this program to
-                        anyone looking to make a positive change in their life."
-                    </Text>
-                    <Text fontSize="md" fontWeight="semibold">
-                        - Meenakshi Agarwal.
-                    </Text>
-                </Box>
+            Customer Victory Reviews
+        </Heading>
+        <SimpleGrid w={'90%'} m={'auto'} mb={'10'} columns={{ base: 1, md: 3 }} spacing={10}>
 
-                <Box
-                    bg="white"
-                    rounded="md"
-                    shadow="md"
-                    p={6}
-                    maxW="sm"
-                    textAlign="center"
-                >
-                    <Box mb={4}>
-                        <img
-                            src="https://static.toiimg.com/thumb/msid-81972193/81972193.jpg?width=500&resizemode=4"
-                            alt="Customer Victory Review"
-                            width="100%"
-                            height="150"
-                        //   borderRadius="full"
-                        //   objectFit="cover"
-                        />
-                    </Box>
-                    <Heading as="h3" size="md" mb={2}>
-                   i Reduced my Health Risks
-                    </Heading>
-                    <Text fontSize="md" mb={4}>
-                        "Losing the extra weight, I am able to move around better, more flexible, stopped snoring and my blood pressure went back to normal. I feel great, I look better, my clothes fit better. Went from size 10 to size 6. Best thing I have done for myself and self esteem health"
-                    </Text>
-                    <Text fontSize="md" fontWeight="semibold">
-                        - Tanuja Mandal.
-                    </Text>
+            <Box
+                bg="white"
+                rounded="md"
+                shadow="md"
+                p={6}
+                maxW="sm"
+                textAlign="center"
+                m={'auto'}
+            >
+                <Box mb={4}>
+                    <img
+                        src="https://static.toiimg.com/photo/msid-70347572/70347572.jpg"
+                        alt="Customer Victory Review"
+                        width="100%"
+                        height="150"
+                    //   borderRadius="full"
+                    //   objectFit="cover"
+                    />
                 </Box>
+                <Heading as="h3" size="md" mb={2}>
+                    Improved My Health and Confidence!
+                </Heading>
+                <Text fontSize="md" mb={4}>
+                    "Since starting this fitness program, I've noticed a huge
+                    improvement in my overall health and fitness. Not only have I lost
+                    weight and toned my body, but I also have more energy and feel more
+                    confident than ever before. I highly recommend this program to
+                    anyone looking to make a positive change in their life."
+                </Text>
+                <Text fontSize="md" fontWeight="semibold">
+                    - Meenakshi Agarwal.
+                </Text>
+            </Box>
 
-                <Box
-                    bg="white"
-                    rounded="md"
-                    shadow="md"
-                    p={6}
-                    maxW="sm"
-                    textAlign="center"
-                >
-                    <Box mb={4}>
-                        <img
-                            src="https://static.toiimg.com/thumb/msid-71050237,width-1070,height-580,imgsize-944456,resizemode-6,overlay-toi_sw,pt-32,y_pad-40/photo.jpg"
-                            alt="Customer Victory Review"
-                            width="100%"
-                            height="150"
-                        //   borderRadius="full"
-                        //   objectFit="cover"
-                        />
-                    </Box>
-                    <Heading as="h3" size="md" mb={2}>
+            <Box
+                bg="white"
+                rounded="md"
+                shadow="md"
+                p={6}
+                maxW="sm"
+                textAlign="center"
+            >
+                <Box mb={4}>
+                    <img
+                        src="https://static.toiimg.com/thumb/msid-81972193/81972193.jpg?width=500&resizemode=4"
+                        alt="Customer Victory Review"
+                        width="100%"
+                        height="150"
+                    //   borderRadius="full"
+                    //   objectFit="cover"
+                    />
+                </Box>
+                <Heading as="h3" size="md" mb={2}>
+                    i Reduced my Health Risks
+                </Heading>
+                <Text fontSize="md" mb={4}>
+                    "Losing the extra weight, I am able to move around better, more flexible, stopped snoring and my blood pressure went back to normal. I feel great, I look better, my clothes fit better. Went from size 10 to size 6. Best thing I have done for myself and self esteem health"
+                </Text>
+                <Text fontSize="md" fontWeight="semibold">
+                    - Tanuja Mandal.
+                </Text>
+            </Box>
+
+            <Box
+                bg="white"
+                rounded="md"
+                shadow="md"
+                p={6}
+                maxW="sm"
+                textAlign="center"
+            >
+                <Box mb={4}>
+                    <img
+                        src="https://static.toiimg.com/thumb/msid-71050237,width-1070,height-580,imgsize-944456,resizemode-6,overlay-toi_sw,pt-32,y_pad-40/photo.jpg"
+                        alt="Customer Victory Review"
+                        width="100%"
+                        height="150"
+                    //   borderRadius="full"
+                    //   objectFit="cover"
+                    />
+                </Box>
+                <Heading as="h3" size="md" mb={2}>
                     It boosted my mood and mental health.
-                    </Heading>
-                    <Text fontSize="md" mb={4}>
-                        "I have lost a total of 47 lbs. I saw rapid results with this program. My experience has been great and been a blessing. It was hard for me to lose weight util now. The staff at this center are wonderful, helpful, and thoughtful during this delicate time. My eating habits have changed, I have increased my exercise habits, and feel more confident in myself."
-                    </Text>
-                    <Text fontSize="md" fontWeight="semibold">
-                        - Shalini Malhotra.
-                    </Text>
-                </Box>
-            </SimpleGrid>
+                </Heading>
+                <Text fontSize="md" mb={4}>
+                    "I have lost a total of 47 lbs. I saw rapid results with this program. My experience has been great and been a blessing. It was hard for me to lose weight util now. The staff at this center are wonderful, helpful, and thoughtful during this delicate time. My eating habits have changed, I have increased my exercise habits, and feel more confident in myself."
+                </Text>
+                <Text fontSize="md" fontWeight="semibold">
+                    - Shalini Malhotra.
+                </Text>
+            </Box>
+        </SimpleGrid>
 
 
 
